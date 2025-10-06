@@ -11,13 +11,11 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex items-center space-x-2 animate-slide-in-left">
-                        <div className="w-10 h-10 bg-gradient-to-r from-casino-gold to-casino-red rounded-lg flex items-center justify-center animate-rotate-3d">
-                            <Star className="w-6 h-6 text-white" />
+                    <div className="flex items-center space-x-2">
+                        <div className="w-14 h-14 rounded-lg flex items-center justify-center ">
+                            <img src="/casino.png" alt="" />
                         </div>
-                        <span className="text-2xl font-bold text-white">
-                            <span className="text-casino-gold">Casino</span>Slots
-                        </span>
+
                     </div>
 
                     {/* Desktop Navigation */}

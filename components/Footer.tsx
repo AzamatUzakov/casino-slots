@@ -45,12 +45,10 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center space-x-2 mb-6">
-                            <div className="w-10 h-10 bg-gradient-to-r from-casino-gold to-casino-red rounded-lg flex items-center justify-center">
-                                <Star className="w-6 h-6 text-white" />
+                            <div className="w-14 h-14  rounded-lg flex items-center justify-center">
+                                <img src="/casino.png" alt="" />
                             </div>
-                            <span className="text-2xl font-bold text-white">
-                                <span className="text-casino-gold">Casino</span>Slots
-                            </span>
+                           
                         </div>
                         <p className="text-gray-400 mb-6">
                             Лучшее онлайн казино с самыми популярными слотами и щедрыми бонусами.
