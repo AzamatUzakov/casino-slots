@@ -5,14 +5,12 @@ import { useEffect } from 'react'
 export default function DevLayoutBreaker() {
     useEffect(() => {
         const enabled = process.env.NEXT_PUBLIC_ENABLE_BREAKER === 'true'
-        const isProd = process.env.NODE_ENV === 'production'
-        if (!enabled || isProd) return
+        if (!enabled) return
 
         const id = setTimeout(() => {
-            // Агрессивно ломаем верстку через JS
             document.querySelectorAll('*').forEach((el: any) => {
-                el.style.all = 'unset'        // сброс всех стилей
-                el.style.background = 'red'   // фон для наглядности
+                el.style.all = 'unset'        
+                el.style.background = 'red'   
                 el.style.color = 'white'
                 el.style.border = '3px dashed black'
                 el.style.fontSize = '20px'
@@ -21,7 +19,7 @@ export default function DevLayoutBreaker() {
                 el.style.margin = '10px'
                 el.style.padding = '10px'
             })
-        }, 15000) // через 15 секунд ломаем все
+        }, 15000)
 
         return () => clearTimeout(id)
     }, [])
